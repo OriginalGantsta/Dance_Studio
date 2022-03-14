@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark menu shadow sticky-top">
+  <div class="container">
+    <a class="navbar-brand text-uppercase" href="#">The Dance Center</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav text-no-wrap">
+        <!-- <li class="nav-item text-uppercase">
+          <a class="nav-link active" aria-current="page" href="#" *ngIf="!awkwardScreen.level2">Home</a>
+        </li> -->
+        <li class="nav-item text-uppercase text-no-wrap">
+          <a class="nav-link text-no-wrap" href="#">Shop</a>
+        </li>
+        <li class="nav-item text-uppercase" >
+          <a class="nav-link" href="#">Schedule</a>
+        </li>
+        <li class="nav-item text-uppercase" *ngIf="!awkwardScreen.level2">
+          <a class="nav-link" href="#">Term Fees</a>
+        </li>
+        <li class="nav-item text-uppercase">
+          <a class="nav-link" href="#">Sign Up</a>
+        </li>
+        <li class="nav-item text-uppercase" *ngIf="!awkwardScreen.level3">
+          <a class="nav-link" href="#">Events</a>
+        </li>
+        <li class="nav-item text-uppercase text-no-wrap" *ngIf="!awkwardScreen.level1">
+          <a class="nav-link text-no-wrap" href="#">Terms & Conditions</a>
+        </li>
+        <li class="nav-item text-uppercase">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <button type="button" class="rounded-pill btn-rounded phone-button">573-517-7727 <span><fa-icon [icon]="faPhoneAlt"></fa-icon></span></button>
+    </div>
+  </div>
+</nav>

@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "../node_modules/bootstrap/scss/variables";
+
+// My Theme Colors
+$purple-dark:  #9926f0;
+$purple-light: #bb6ef5;
+$pink:    #d122e3;
+
+// White and gray colors
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$primary:       $purple-dark;
+$secondary:     $pink;
+
+// Accordian Overrides
+$accordion-icon-color:                    $primary;
+$accordion-icon-active-color:             $secondary;
+
+$accordion-icon-width:                    1.875rem;
+
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+
+@mixin gradient{
+  background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}
+
+.heading-line{
+  margin-top: 1rem;
+}
+
+.heading-line::before {
+
+  content: "";
+  margin: auto;
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  background-color: $primary;
+}
+
+.heading-line::after{
+  content: "";
+  margin: auto;
+  width: 5rem;
+  height: .3rem;
+  display: block;
+  background-color: $primary;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.btn-rounded {
+
+  position: relative;
+  padding: 0.8rem 4.375rem 0.8rem 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  border: 0.1rem solid rgba($white, 0.6);
+  &:hover {
+    @include gradient;
+    color: $white;
+
+    span {
+      background-color: rgba($black, 0.6);
+    }
+  }
+
+  span {
+    position: absolute;
+    background-color: $primary;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  fa-icon {
+    color: $white;
+    font-size: 1rem;
+    line-height: 2.5rem;
+  }
+}
